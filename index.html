@@ -7,6 +7,13 @@ HTML
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JL Fit Active (JLFA) | Juan Luis Entrenador Personal</title>
+    
+    <!-- Metaetiquetas para previsualización en WhatsApp / Redes Sociales -->
+    <meta property="og:title" content="JL Fit Active | Entrenamiento Personal">
+    <meta property="og:description" content="Tu cambio empieza hoy: entrenamiento adaptado a tus objetivos con el Programa Fit Active.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800">
+    <meta property="og:type" content="website">
+
     <!-- Iconos de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -237,7 +244,7 @@ HTML
         <div class="badge">¡Bienvenid@!</div>
         <h1>Entrenamiento & Rendimiento Deportivo</h1>
         <p class="hero-subtitle">Programas adaptados a tus objetivos: hipertrofia, pérdida de grasa y fuerza mediante entrenamiento presencial u online.</p>
-        <a href="https://wa.me/34672221431?text=Hola%20Juan%20Luis,%20quiero%20informaci%C3%B3n%20sobre%20JL%20Fit%20Active" class="btn-main" target="_blank">
+        <a href="https://wa.me/34672221431?text=%C2%A1Hola%20Juan%20Luis!%20He%20visto%20la%20web%20de%20JL%20Fit%20Active%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20programas%20de%20entrenamiento." class="btn-main" target="_blank">
             <i class="fa-brands fa-whatsapp"></i> Contáctame
         </a>
     </header>
@@ -273,7 +280,7 @@ HTML
                     <li><i class="fa-solid fa-check"></i> Control estricto de cargas e intensidad</li>
                     <li><i class="fa-solid fa-check"></i> Planificación adaptada a tu nivel</li>
                 </ul>
-                <a href="https://wa.me/34672221431?text=Hola%20Juan%20Luis,%20me%20interesa%20el%20Plan%20Presencial%20JLFA" class="btn-main" style="width: 100%; justify-content: center;" target="_blank">Consultar Plazas</a>
+                <a href="https://wa.me/34672221431?text=%C2%A1Hola%20Juan%20Luis!%20Estoy%20interesado%20en%20el%20Entrenamiento%20Presencial.%20Me%20gustar%C3%ADa%20consultar%20disponibilidad%20de%20plazas%20y%20horarios." class="btn-main" style="width: 100%; justify-content: center;" target="_blank">Consultar Plazas</a>
             </div>
 
             <!-- Plan Online -->
@@ -288,7 +295,7 @@ HTML
                     <li><i class="fa-solid fa-check"></i> Comunicación directa por WhatsApp</li>
                     <li><i class="fa-solid fa-check"></i> Pautas generales de hábitos activos</li>
                 </ul>
-                <a href="https://wa.me/34672221431?text=Hola%20Juan%20Luis,%20me%20interesa%20el%20Plan%20Online%20JLFA" class="btn-main" style="width: 100%; justify-content: center;" target="_blank">Empezar Ahora</a>
+                <a href="https://wa.me/34672221431?text=%C2%A1Hola%20Juan%20Luis!%20Quiero%20empezar%20con%20el%20Asesoramiento%20Online%20de%20JLFA.%20%C2%BFCu%C3%A1les%20son%20los%20pasos%20para%20comenzar%3F" class="btn-main" style="width: 100%; justify-content: center;" target="_blank">Empezar Ahora</a>
             </div>
         </div>
 
@@ -312,18 +319,21 @@ HTML
     </div>
 
     <!-- Botón Flotante de WhatsApp -->
-    <a href="https://wa.me/34672221431?text=Hola%20Juan%20Luis,%20tengo%20una%20duda%20sobre%20JL%20Fit%20Active" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/34672221431?text=Hola%20Juan%20Luis,%20tengo%20una%20duda%20r%C3%A1pida%20sobre%20la%20metodolog%C3%ADa%20JL%20Fit%20Active." class="whatsapp-float" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- Pie de Página -->
-    <footHTML
+    <!-- Banner Informativo de Cookies -->
+    <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #151c2e; border-top: 1px solid #1e293b; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; z-index: 1000; flex-wrap: wrap;">
+        <p style="color: #94a3b8; font-size: 0.85rem; margin: 0; max-width: 800px;">
+            🍪 <strong>Uso de Cookies:</strong> Este sitio web es estático e informativo. No utilizamos cookies de seguimiento, publicidad ni analítica de terceros.
+        </p>
+        <button onclick="aceptarCookies()" style="background: linear-gradient(135deg, #3b82f6, #06b6d4); color: white; border: none; padding: 0.5rem 1.2rem; border-radius: 20px; font-weight: bold; cursor: pointer; font-size: 0.85rem;">
+            Entendido
+        </button>
+    </div>
 
-
-<HTML
-
-
-    <!-- Footer con enlace legal -->
+    <!-- Pie de Página Legal -->
     <footer>
         <p>© 2026 <strong>JL Fit Active (JLFA)</strong>. Todos los derechos reservados.</p>
         <p style="color: #64748b; font-size: 0.8rem; margin-top: 0.5rem;">
@@ -349,8 +359,19 @@ HTML
         </div>
     </div>
 
-    <!-- Script de control del Modal Legal -->
+    <!-- JavaScript para Modal y Cookies -->
     <script>
+        // Control de cookies
+        function aceptarCookies() {
+            localStorage.setItem('cookies_aceptadas', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
+        if (localStorage.getItem('cookies_aceptadas') === 'true') {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
+        // Control de modal legal
         function abrirLegal() { 
             document.getElementById('modal-legal').style.display = 'flex'; 
         }
@@ -358,7 +379,5 @@ HTML
             document.getElementById('modal-legal').style.display = 'none'; 
         }
     </script>
-</body>>
-  
 </body>
-</html> 
+</html>
