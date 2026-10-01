@@ -317,10 +317,44 @@ HTML
     </a>
 
     <!-- Pie de Página -->
-    <footer>
+    <footHTML
+
+
+<footer>
+    <p>© 2026 <strong>JL Fit Active (JLFA)</strong>. Todos los derechos reservados.</p>
+    <p style="color: #64748b; font-size: 0.8rem;">
+        Queda prohibida la reproducción total o parcial de los contenidos sin autorización previa. | 
+        <span style="color: #06b6d4;">Política de Cookies:</span> Este sitio no recopila datos personales ni emplea cookies analíticas o publicitarias.
+    </p>
+</footer>er>
         <p>© 2026 <strong>JL Fit Active (JLFA)</strong>. Todos los derechos reservados.</p>
         <p style="color: #64748b; font-size: 0.8rem;">Queda prohibida la reproducción total o parcial de las rutinas, metodologías y contenidos sin autorización previa. Sujeto a términos de servicio y aviso legal.</p>
     </footer>
+HTML
 
+
+<!-- Banner Informativo de Cookies -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #151c2e; border-top: 1px solid #1e293b; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; z-index: 1000; flex-wrap: wrap;">
+    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0; max-width: 800px;">
+        🍪 <strong>Uso de Cookies:</strong> Este sitio web es estático e informativo. No utilizamos cookies de seguimiento, publicidad ni analítica de terceros.
+    </p>
+    <button onclick="aceptarCookies()" style="background: linear-gradient(135deg, #3b82f6, #06b6d4); color: white; border: none; padding: 0.5rem 1.2rem; border-radius: 20px; font-weight: bold; cursor: pointer; font-size: 0.85rem;">
+        Entendido
+    </button>
+</div>
+    HTML
+
+
+<script>
+    function aceptarCookies() {
+        localStorage.setItem('cookies_aceptadas', 'true');
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    // Si el usuario ya aceptó previamente, ocultar el banner
+    if (localStorage.getItem('cookies_aceptadas') === 'true') {
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+</script>
 </body>
 </html> 
